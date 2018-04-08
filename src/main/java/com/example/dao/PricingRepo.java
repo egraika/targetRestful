@@ -7,10 +7,11 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import com.example.entity.Pricing;
+import com.example.entity.CurrentPricing;
 
 @RepositoryRestResource(collectionResourceRel = "pricing", path = "pricing")
 public interface PricingRepo extends MongoRepository<Pricing, String> {
 
-	//List<Pricing> findByLastName(@Param("name") String name);
-
+	Pricing findByProductID(@Param("ProductID") long ProductID);
+	
 }

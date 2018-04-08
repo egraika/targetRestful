@@ -3,25 +3,33 @@ package com.example.entity;
 import org.springframework.data.annotation.Id;
 
 public class Pricing {
-
+	
 	@Id private String id;
-
-	private String price;
-	private String currency;
-
-	public String getPrice() {
-		return price;
+	private int productID;
+	private String name;
+	private CurrentPricing current_price;
+	
+	public String getName() {
+		return name;
 	}
 
-	public void setPrice(String price) {
-		this.price = price;
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public CurrentPricing getCurrent_Price() {
+		return current_price;
 	}
 
-	public String getCurrency() {
-		return currency;
+	public void setCurrent_Price(CurrentPricing current_price) {
+		this.current_price = current_price;
+	}
+	
+	public int getProductID() {
+		return productID;
 	}
 
-	public void setCurrency(String currency) {
-		this.currency = currency;
+	public void setProductID(int productID) {
+		this.productID = productID;
 	}
 }
